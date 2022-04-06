@@ -1,19 +1,4 @@
-FROM node:17
+FROM postgres
 
-RUN apt-get update
-
-ENV PORT=3000
-
-EXPOSE 5432
-
-WORKDIR /src
-
-COPY [ "package.json", "yarn.lock"]
-
-RUN yarn
-
-COPY . .
-
-USER node
-
-CMD ["yarn", "dev"]
+ENV POSTGRE_PASSWORD='1234'
+ENV POSTGRES_DB='postgres'
