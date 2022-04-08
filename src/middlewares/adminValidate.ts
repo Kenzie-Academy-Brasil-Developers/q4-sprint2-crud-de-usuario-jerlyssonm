@@ -8,6 +8,7 @@ const adminValidate = async (req: Request, res: Response, next: NextFunction) =>
         const user: IUser = await new UserRepository().findByEmail(email) 
         if(isAdm){
             req.validated = user
+            req.uuid = uuid
             return next()
         }
 

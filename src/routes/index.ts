@@ -14,11 +14,11 @@ import { userRegiterShape, userLoginShape, updateShape } from '../schemas';
 
 const router = Router();
 
-router.get('',authUser, adminValidate, getUsersController)
-router.get('/profile', authUser, getProfileController)
-router.post('', validateSchema(userRegiterShape), createUserController)
-router.post('/login', validateSchema(userLoginShape), loginUserController)
-router.delete('/delete/:uuid', authUser, adminValidate, deleteUserController)
-router.patch('/:uuid', authUser, adminValidate, validateSchema(updateShape), updateUserController)
+router.get('/users',authUser, adminValidate, getUsersController)
+router.get('/users/profile', authUser, getProfileController)
+router.post('/users', validateSchema(userRegiterShape), createUserController)
+router.post('/login/', validateSchema(userLoginShape), loginUserController)
+router.delete('/users/:uuid', authUser, adminValidate, deleteUserController)
+router.patch('/users/:uuid', authUser, adminValidate, validateSchema(updateShape), updateUserController)
 
 export default router;
