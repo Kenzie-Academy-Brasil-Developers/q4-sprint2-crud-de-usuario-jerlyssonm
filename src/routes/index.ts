@@ -6,7 +6,7 @@ import {
     deleteUserController,
     getProfileController,
     updateUserController
-} from '../constrollers';
+} from '../controllers';
 import { validateSchema, authUser, adminValidate } from '../middlewares';
 import { userRegiterShape, userLoginShape, updateShape } from '../schemas';
 

@@ -1,10 +1,14 @@
+import dotenv from 'dotenv';
+
+dotenv.config()
+
 export default {
    "type": "postgres",
    "host": "localhost",
    "port": 5432,
    "username": "postgres",
-   "password": "1234",
-   "database": "postgres",
+   "password": process.env.POSTGRES_PASSWORD,
+   "database": process.env.POSTGRES_DB,
    "synchronize": true,
    "logging": false,
    "entities": [

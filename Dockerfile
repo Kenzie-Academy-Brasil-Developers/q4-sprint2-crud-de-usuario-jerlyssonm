@@ -1,4 +1,0 @@
-FROM postgres
-
-ENV POSTGRE_PASSWORD='1234'
-ENV POSTGRES_DB='postgres'
